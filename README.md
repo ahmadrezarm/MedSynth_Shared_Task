@@ -7,31 +7,19 @@ This is the repository for MedSynth in SMM4H-HeaRD 2026 shared task
 
 Create a CSV file with your predictions:
 
-**For Dialogue-to-Note Task:**
 ```csv
 id,generated_note
 1,"Patient presents with chest pain..."
 2,"Chief complaint is headache..."
 ```
 
-**For Note-to-Dialogue Task:**
-```csv
-id,generated_dialogue
-1,"Doctor: Hello, how can I help you today?..."
-2,"Doctor: What brings you in?..."
-```
 
 ### 2. Run Evaluation
 
-**Dialogue-to-Note Evaluation:**
 ```bash
 python evaluate_dialogue_to_note.py --submission your_submission.csv
 ```
 
-**Note-to-Dialogue Evaluation:**
-```bash
-python evaluate_note_to_dialogue.py --submission your_submission.csv
-```
 
 **Custom Output Path:**
 ```bash
@@ -137,7 +125,6 @@ python -c "import nltk; nltk.download('punkt_tab')"
 ## Files
 
 - `evaluate_dialogue_to_note.py` - Evaluate dialogue → note generation
-- `evaluate_note_to_dialogue.py` - Evaluate note → dialogue generation
 - `dataset/shared_task_train.csv` - Training data (id, note, dialogue)
 - `dataset/shared_task_eval.csv` - Evaluation data (id, note, dialogue)
 - `BASELINE_PERFORMANCE_REPORT.md` - Baseline model results
